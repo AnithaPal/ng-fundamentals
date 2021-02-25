@@ -5,7 +5,9 @@ import { Component } from '@angular/core'
             <div>
               <h1> Upcoming Events </h1>
               <hr>
-              <event-thumbnail (eventClick) = "handleEventClicked($event)" [event] ="event1" > </event-thumbnail>
+              <event-thumbnail #thumbnail [event] ="event1" > </event-thumbnail>
+
+              <button class="btn btn-primary" (click)="thumbnail.logFoo()"> Log Some Foo!</button>
           </div>
             `
 })
