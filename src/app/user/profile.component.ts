@@ -25,6 +25,6 @@ import { Component } from '@angular/core';
 })
 
 
-export class profileComponent {
+export class ProfileComponent {
 
 }
