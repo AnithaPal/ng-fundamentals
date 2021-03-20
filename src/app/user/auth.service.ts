@@ -7,7 +7,6 @@ import { IUser } from './user.model';
 export class AuthService {
   currentUser:IUser;
   loginUser(userName: string, password: string){
-    console.log("logged in");
 
     this.currentUser = {
       id: 1,
@@ -16,7 +15,6 @@ export class AuthService {
       lastName: 'Paul',
     }
 
-    console.log("Current User info " + this.currentUser.firstName + " " + this.currentUser.lastName);
   }
 
   isAuthenticated() {
