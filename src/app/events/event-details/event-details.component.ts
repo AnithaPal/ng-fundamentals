@@ -16,6 +16,7 @@ import { IEvent, ISession } from '../shared/index';
 export class EventDetailsComponent {
   event: IEvent;
   addMode: Boolean;
+  filterBy: string = 'all';
   constructor(private eventService: EventService, private route: ActivatedRoute ) {
 
   }
@@ -41,4 +42,6 @@ export class EventDetailsComponent {
    cancelAddSession(){
      this.addMode = false;
    }
+
+
 }
