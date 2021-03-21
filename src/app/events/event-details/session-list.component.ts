@@ -24,7 +24,6 @@ export class SessionListComponent implements OnChanges {
     }
     else {
       this.visibleSessions = this.sessions.filter(session => {
-        console.log(session.level)
         return session.level.toLocaleLowerCase() === filter;
       })
     }
