@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChild, Inject, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild, Inject } from '@angular/core';
 import { JQ_TOKEN } from './jQuery.service';
 
 
@@ -25,22 +25,18 @@ import { JQ_TOKEN } from './jQuery.service';
     ]
 })
 
-export class SimpleModalComponent implements AfterViewInit{
+export class SimpleModalComponent {
   @Input() title: string;
   @Input() elementId: string;
-  @ViewChild('#modalcontainer') containerEl: ElementRef;
+  @ViewChild('modalContainer') containerElement: ElementRef;
   @Input() closeOnBodyClick: string;
 
   constructor(@Inject(JQ_TOKEN) private $: any ){}
 
 
-  ngAfterViewInit() {
-      console.log("container modal " + this.containerEl);
-  }
-
   closeModal(){
      if(this.closeOnBodyClick.toLocaleLowerCase() === 'true') {
-       this.$(this.containerEl.nativeElement).modal("hide");
+       this.$(this.containerElement.nativeElement).modal("hide");
      }
   }
 
