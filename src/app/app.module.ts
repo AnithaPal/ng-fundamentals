@@ -22,7 +22,7 @@ JQ_TOKEN,
 TOASTR_TOKEN,
 Toastr,
 CollapsibleWellComponent,
-SimpleModelComponent,
+SimpleModalComponent,
 ModalTriggerDirective
 } from './common/index';
 
@@ -55,7 +55,7 @@ let jQuery = window['$'];
     SessionListComponent,
     CollapsibleWellComponent,
     DurationPipe,
-    SimpleModelComponent,
+    SimpleModalComponent,
     ModalTriggerDirective
   ],
 
